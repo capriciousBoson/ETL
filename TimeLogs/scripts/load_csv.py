@@ -1,22 +1,22 @@
 from TimeLogs.models import TimeLogs
 from dateutil.parser import parse
+from datetime import datetime
 import csv
 
-def format_date(date_str):
-    date_object = parse(date_str, tzinfos={"BST": 6 * 3600})
-    return date_object.strftime("%d-%m-%Y")
-
-
-def format_time(time_str):
-    if time_str == "":
-        time_str = 0.0
-    else:
-        time_str = round(int(time_str) / 3600000, 1)
-    return time_str
-
-
 def run():
-    with open('TimeLogs/data/TIME-LOGS-CHALLANGE.xlsx') as file:
+    def format_date(date_str):
+        date_object = parse(date_str, tzinfos={"BST": 6 * 3600})
+        date_object = date_object.strftime("%Y-%m-%d")
+        return date_object
+
+    def format_time(time_str):
+        if time_str == "":
+            time_str = 0.0
+        else:
+            time_str = round(int(time_str) / 3600000, 1)
+        return time_str
+
+    with open('TimeLogs/data/TIME-LOGS-CHALLANGE.csv') as file:
         reader = csv.reader(file)
 
         # to skip the header
