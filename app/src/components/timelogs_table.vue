@@ -27,71 +27,72 @@
       </tbody>
     </table>
   </div>
-    <div  class="pagination centered">
-      <button class="btn btn-success" :disabled="currentPage === 1" @click="previousPage">Previous</button>
-      <span style="margin-left: 50px;">Page {{ currentPage }} of {{ pageCount }}</span>
-      <button class="btn btn-success" style="margin-left: 50px;" :disabled="currentPage === pageCount" @click="nextPage">Next</button>
-    </div>
-  </template>
+  <div class="pagination centered">
+    <button class="btn btn-success" :disabled="currentPage === 1" @click="previousPage">Previous</button>
+    <span style="margin-left: 50px;">Page {{ currentPage }} of {{ pageCount }}</span>
+    <button class="btn btn-success" style="margin-left: 50px;" :disabled="currentPage === pageCount"
+      @click="nextPage">Next</button>
+  </div>
+</template>
   
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
-        currentPage:1, //stores the current page number
-        itemsPerPage:10, 
-        items: []
-      }
-    },
-    computed:{
-      //a computed property that returns the 
-      //sliced array of items based on the current page 
-      // and items per page
-      slicedItems(){
-        const start = (this.currentPage - 1)* this.itemsPerPage
-        const end = start + this.itemsPerPage
-        return this.items.slice(start, end)
-      },
-      pageCount() {
-        return Math.ceil(this.items.length / this.itemsPerPage)
-      }
-    },
-    methods:{
-  previousPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      currentPage: 1, //stores the current page number
+      itemsPerPage: 10,
+      items: []
     }
   },
-  nextPage() {
-    if (this.currentPage < this.pageCount) {
-      this.currentPage++
+  computed: {
+    //a computed property that returns the 
+    //sliced array of items based on the current page 
+    // and items per page
+    slicedItems() {
+      const start = (this.currentPage - 1) * this.itemsPerPage
+      const end = start + this.itemsPerPage
+      return this.items.slice(start, end)
+    },
+    pageCount() {
+      return Math.ceil(this.items.length / this.itemsPerPage)
     }
-  }
-      
+  },
+  methods: {
+    previousPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--
+      }
     },
-    created() {
-      
-      axios.get('http://localhost:8000/timelogs/api/')
-        .then(response => {
-          this.items = response.data;
-        })
-        .catch(error => {
-          console.log(error);
-        });
-        window.addEventListener('keydown', this.handleKeyDown)
-    },
-    beforeUnmount() {
+    nextPage() {
+      if (this.currentPage < this.pageCount) {
+        this.currentPage++
+      }
+    }
+
+  },
+  created() {
+
+    axios.get('http://localhost:8000/timelogs/api/')
+      .then(response => {
+        this.items = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    window.addEventListener('keydown', this.handleKeyDown)
+  },
+  beforeUnmount() {
     window.removeEventListener("keydown", this.handleKeyDown);
   },
-    
 
-  };
-  </script>
 
-  <style scoped>
-  .centered {
+};
+</script>
+
+<style scoped>
+.centered {
   display: flex;
   justify-content: center;
 }
