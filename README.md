@@ -1,4 +1,4 @@
-![]()
+![ETL](/app/src/assets/ETL.jpg)
 
 ## Junior Python Developer Coding task:
 Demonstrate your full stack development skills by creating a simple application that allows a user to interact
