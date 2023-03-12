@@ -1,9 +1,0 @@
-<template>
-    <h1> This is the Home page!</h1>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Home_page'
-  };
-  </script>

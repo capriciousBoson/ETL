@@ -10,7 +10,7 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li class="nav-item"><a href="/" class="nav-link px-2 link-dark" >Timelogs</a></li>
           <li class="nav-item"><a href="/reports" class="nav-link px-2 link-dark">Reports</a></li>
-          <li class="nav-item"><a href="/test" class="nav-link px-2 link-dark">Test</a></li>
+          <!--<li class="nav-item"><a href="/test" class="nav-link px-2 link-dark">Test</a></li>-->
         
         </ul>
 

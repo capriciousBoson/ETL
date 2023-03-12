@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+# TimeLogs is a model that has a team, username, job_number, booking_codes, booking_date,
+# time_tracked, and task_estimate.
 class TimeLogs(models.Model):
     team = models.CharField(max_length=250)
     username = models.CharField(max_length=250)

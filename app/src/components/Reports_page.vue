@@ -1,5 +1,8 @@
 <template>
+  <div class="container" style="width:40% ;">
+    <h3 style="padding-left: 157px">Team vs Time tracked</h3>
   <VuePlotly :data="datapie" :layout="layout" :display-mode-bar="false"></VuePlotly>
+  </div>
 </template>
 
 <script>
@@ -21,7 +24,13 @@ export default {
         type: "pie"
       }],
       layout: {
-        title: "Team vs Tracked Time"
+        font: {
+        size: 17 // modify the font size here
+        },
+        legend: {
+        orientation: 'h',
+        y: -0.1 // adjust the y position to move the legends below the chart
+            }
       },
       data: [],
       teams: [],
