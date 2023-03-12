@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>My Table Page</h1>
     <Table />
   </div>
 </template>
