@@ -1,7 +1,7 @@
 <template>
   
   <div>
-    
+    <Header />
     <router-view></router-view>
   </div>
   <div>
@@ -11,10 +11,11 @@
 
 <script>
 //import Table from './components/timelogs_table.vue';
+import Header from './components/Header_global.vue';
 
 export default {
   components: {
-    //Table
+    Header
   }
 }
 </script>
