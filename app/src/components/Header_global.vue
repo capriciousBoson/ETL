@@ -4,7 +4,7 @@
     <div class="container" >
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="https://media.licdn.com/dms/image/C4D0BAQEujqigjNnvMw/company-logo_200_200/0/1607939154711?e=2147483647&v=beta&t=Y1lgSQ3psGR6DtDz_NBslrEl2Tg489QVcfKKrCSr1y0"></use></svg>
+          <img src="https://media.licdn.com/dms/image/C4D0BAQEujqigjNnvMw/company-logo_200_200/0/1607939154711?e=2147483647&v=beta&t=Y1lgSQ3psGR6DtDz_NBslrEl2Tg489QVcfKKrCSr1y0" alt="mdo" width="37" height="37" class="bi me-2" >
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
