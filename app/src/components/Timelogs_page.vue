@@ -1,6 +1,8 @@
 <template>
   <div>
-    <router-link to="/reports">show reports</router-link>
+    
+    <a class="btn btn-primary" href="/reports" role="button">show reports</a>
+    
   </div>
     <div>
       <Table />
