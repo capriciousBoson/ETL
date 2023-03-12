@@ -30,3 +30,4 @@ Please ensure that your demonstration showcases best coding practices and includ
 Additional points will be awarded for the quality and visual appeal of your user interface design. We encourage you to showcase your creativity and design skills in  this aspect of the task.
 #####
 Please submit your solution at least 24 hrs before the interview to give us a chance to review your code before the interview. 
+![ETL](/app/src/assets/preview.gif)
