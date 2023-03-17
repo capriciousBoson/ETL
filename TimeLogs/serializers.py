@@ -1,5 +1,6 @@
 from  rest_framework import serializers
 
+# It creates a serializer class that will be used to validate the data that is passed to the API.
 class TimelogSerializer(serializers.Serializer):
 
     team = serializers.CharField(max_length=250)
